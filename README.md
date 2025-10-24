@@ -1,6 +1,7 @@
 # My Portfolio
 
 Responsive, fast and content-first portfolio for a software engineer and project management.
+It will be continiously updated :D
 
 ## Quickstart
 
