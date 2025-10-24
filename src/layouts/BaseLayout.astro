@@ -5,18 +5,16 @@ import Footer from '../components/Footer.astro';
 const {
   title = 'Diego Henriquez — Portfolio',
   description = 'Software Engineer → Project Manager. UI/UX-minded. Projects & case studies.',
-  canonical = '/',
 } = Astro.props;
 
-// Generar canonical absoluto con base
-const site = Astro.site?.href ?? 'https://diego5hz.github.io/';
-const base = import.meta.env.BASE_URL; 
-const path = canonical.replace(/^\/+/, '');
-const fullCanonical = `${site.replace(/\/$/, '')}${base}${path}`;
+// Usa Astro.url que ya maneja automáticamente el base
+const fullCanonical = Astro.url.href;
+const pageTitle = Astro.url.pathname === '/My-Portfolio/' || Astro.url.pathname === '/My-Portfolio' 
+  ? title 
+  : `${title} - ${Astro.url.pathname.split('/').pop()}`;
 ---
 <html lang="en" class="scroll-smooth">
   <head>
-
     <base href={import.meta.env.BASE_URL} />
 
     <meta charset="utf-8" />
@@ -25,13 +23,13 @@ const fullCanonical = `${site.replace(/\/$/, '')}${base}${path}`;
 
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
 
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={fullCanonical} />
     <link rel="canonical" href={fullCanonical} />
 
-    <title>{title}</title>
+    <title>{pageTitle}</title>
   </head>
 
   <body class="min-h-screen bg-neutral-50 text-neutral-900 selection:bg-brand-200 selection:text-neutral-900">
