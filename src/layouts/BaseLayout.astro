@@ -15,6 +15,7 @@ const { title = 'Diego Henriquez — Portfolio', description = 'Software Enginee
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <title>{title}</title>
+    <base href={import.meta.env.BASE_URL} />
   </head>
   <body class="min-h-screen bg-neutral-50 text-neutral-900 selection:bg-brand-200 selection:text-neutral-900">
     <div class="mx-auto max-w-6xl px-4">
