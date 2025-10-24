@@ -3,5 +3,8 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://diego5hz.github.io',
-  base: '/',
+  base: '/My-Portfolio/',
+  integrations: [tailwind({
+    applyBaseStyles: true
+  })],
 });
