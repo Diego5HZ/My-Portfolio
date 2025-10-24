@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About — Diego Henríquez">
+  <section class="flex flex-col md:flex-row justify-center md:justify-center items-center md:items-center min-h-[70vh] gap-8 text-center md:text-left">
+    <div class="flex-shrink-0 w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-md border border-neutral-200 bg-neutral-100">
+      <img 
+        src="/images/yolo.webp" 
+        alt="Portrait of Diego Henriquez" 
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <div class="max-w-2xl">
+      <h1 class="text-2xl md:text-3xl font-bold mb-4">About Me</h1>
+      <ul class="list-disc md:pl-5 space-y-1 text-neutral-700 text-left">
+        <li>Engineer turning PM, with a design mindset and passion for building meaningful systems.</li>
+        <li>Cheerful, positive, and naturally empathetic — I enjoy listening and offering balanced perspectives.</li>
+        <li>I value collaboration, structure, and creativity when solving complex problems.</li>
+        <li>Focused on blending engineering, design, and leadership to make tech more human-centered.</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold mt-6 mb-2">Hobbies & Interests</h2>
+      <ul class="list-disc md:pl-5 space-y-1 text-neutral-700 text-left">
+        <li>Origami and hands-on crafts — finding calm through creation.</li>
+        <li>Flying drones and exploring aerial photography.</li>
+        <li>Swimming — over 15 years of experience and still my favorite way to reset.</li>
+        <li>Building things — from gadgets to game prototypes.</li>
+        <li>Programming, experimenting, and designing systems that connect ideas to people.</li>
+        <li>Thinking up creative plans and long-term concepts.</li>
+      </ul>
+    </div>
+  </section>
+
+</BaseLayout>

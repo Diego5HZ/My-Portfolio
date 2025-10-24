@@ -1,0 +1,12 @@
+# Node / Astro
+node_modules/
+dist/
+.astro/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Env / local configs
+.env
+.env.*

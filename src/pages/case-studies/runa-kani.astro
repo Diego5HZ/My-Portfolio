@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Case Study — Runa Kani">
+  <article class="prose max-w-none">
+    <h1>Runa Kani — Incident Reporting Flow</h1>
+    <p><strong>Role:</strong> PM / Lead Dev / UI</p>
+    <h2>Context</h2>
+    <p>Emergency reporting app. Goal: reduce time‑to‑submission while preserving context (location, device state) and compliance.</p>
+    <h2>Problem</h2>
+    <p>Users abandoned when multi‑step verification slowed them down.</p>
+    <h2>Process</h2>
+    <p>Benchmarked flows, mapped friction points, built 3 prototypes (single‑PIN, dual‑PIN, multi‑PIN). Ran usability tests.</p>
+    <h2>Execution</h2>
+    <p>Adopted multi‑PIN with clearer affordances, prefilled context, async dispatch, and offline queue.</p>
+    <h2>Results</h2>
+    <ul>
+      <li>−35% time‑to‑submission</li>
+      <li>+22% completion rate</li>
+      <li>Zero PII leakage incidents</li>
+    </ul>
+    <h2>Lessons</h2>
+    <p>Balance safety and speed; preload context; keep legal checks early but non‑blocking.</p>
+  </article>
+</BaseLayout>

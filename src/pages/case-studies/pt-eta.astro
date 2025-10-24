@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Case Study — Public Transport ETA">
+  <article class="prose max-w-none">
+    <h1>Real‑time Bus ETA — Headways & Data Fusion</h1>
+    <p><strong>Role:</strong> Data / PM</p>
+    <h2>Context</h2>
+    <p>City bus system; uneven headways and unreliable arrival predictions.</p>
+    <h2>Problem</h2>
+    <p>High variance in ETAs during peak hours led to user frustration and operational inefficiency.</p>
+    <h2>Process</h2>
+    <p>Ingested GPS, schedule, and incident feeds; compared Kalman vs. gradient models; designed SLA for latency.</p>
+    <h2>Execution</h2>
+    <p>Implemented headway normalization and anomaly alerts; improved ETA pipeline with caching.</p>
+    <h2>Results</h2>
+    <ul>
+      <li>−18% mean absolute ETA error</li>
+      <li>+12% on-time arrivals</li>
+      <li>Sub‑500ms P95 latency</li>
+    </ul>
+    <h2>Lessons</h2>
+    <p>Prioritize data freshness; expose uncertainty; align ops with model feedback.</p>
+  </article>
+</BaseLayout>

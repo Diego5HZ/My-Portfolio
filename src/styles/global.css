@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global tweaks */
+:root {
+  --radius: 16px;
+}
+
+.prose a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body {
+  @apply bg-neutral-50 text-neutral-900;
+  background-color: #f8fafc;
+  color: #0f172a;
+}

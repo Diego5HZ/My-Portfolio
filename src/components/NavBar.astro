@@ -1,0 +1,29 @@
+---
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/case-studies', label: 'Case Studies' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' }
+];
+---
+<header class="py-6">
+  <div class="flex items-center justify-between gap-4">
+    <a href="/" class="font-semibold tracking-tight text-lg">Diego<span class="text-brand-600">.</span></a>
+    <nav class="hidden md:flex items-center gap-6">
+      {links.map(l => <a href={l.href} class="hover:text-brand-700 transition">{l.label}</a>)}
+    </nav>
+    <button id="menu" class="md:hidden rounded-xl border px-3 py-2 border-neutral-200">Menu</button>
+  </div>
+  <!-- Mobile nav -->
+  <nav id="mobile" class="md:hidden mt-3 hidden flex-col gap-2">
+    {links.map(l => <a href={l.href} class="rounded-lg px-3 py-2 hover:bg-neutral-100">{l.label}</a>)}
+  </nav>
+  <script>
+    const btn = document.getElementById('menu');
+    const mobile = document.getElementById('mobile');
+    btn?.addEventListener('click', () => {
+      mobile?.classList.toggle('hidden');
+    });
+  </script>
+</header>

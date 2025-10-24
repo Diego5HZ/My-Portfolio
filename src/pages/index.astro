@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../data/projects';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+<BaseLayout title="Diego Henríquez — Software Engineer → Project Manager">
+  <section class="py-8 md:py-16">
+    <div class="grid md:grid-cols-2 items-center gap-8 md:gap-12">
+      <div>
+        <h1 class="text-3xl md:text-5xl font-bold tracking-tight">Software Engineer → <span class="text-brand-700">Project Manager</span></h1>
+        <p class="mt-4 text-neutral-700 text-base md:text-lg">I build well‑designed products and lead delivery with focus on outcomes, quality and velocity. Here are selected projects and case studies.</p>
+        <div class="mt-6 flex flex-wrap items-center gap-3">
+          <a href="/projects" class="rounded-xl bg-brand-600 px-4 py-2 text-white hover:bg-brand-700">View Projects</a>
+          <a href="/contact" class="rounded-xl border border-neutral-300 px-4 py-2 hover:bg-neutral-100">Contact</a>
+        </div>
+      </div>
+      <div class="rounded-3xl border border-neutral-200 p-6 bg-white shadow-sm">
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3"><span class="mt-1 size-2 rounded-full bg-brand-600"></span> 15+ years in swimming discipline—now applying the same consistency to software and PM.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 size-2 rounded-full bg-brand-600"></span> Strong in system design, data, and UI/UX craft.</li>
+          <li class="flex items-start gap-3"><span class="mt-1 size-2 rounded-full bg-brand-600"></span> Interested in public transport analytics and safety apps.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-8">
+    <h2 class="text-xl md:text-2xl font-semibold mb-4">Featured Projects</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {projects.map((p) => <ProjectCard project={p} />)}
+    </div>
+  </section>
+</BaseLayout>
