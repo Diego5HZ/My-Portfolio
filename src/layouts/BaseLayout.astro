@@ -7,7 +7,10 @@ const {
   description = 'Software Engineer → Project Manager. UI/UX-minded. Projects & case studies.',
 } = Astro.props;
 
-const currentUrl = Astro.url;
+const site = 'https://diego5hz.github.io';
+const base = '/My-Portfolio/';
+const currentPath = Astro.url.pathname;
+const fullUrl = `${site}${currentPath}`;
 ---
 <html lang="en" class="scroll-smooth">
   <head>
@@ -15,13 +18,14 @@ const currentUrl = Astro.url;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Usa base explícitamente para assets -->
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`.replace(/\/\//g, '/')} />
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={currentUrl} />
-    <link rel="canonical" href={currentUrl} />
+    <meta property="og:url" content={fullUrl} />
+    <link rel="canonical" href={fullUrl} />
 
     <title>{title}</title>
   </head>
