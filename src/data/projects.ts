@@ -15,7 +15,7 @@ export const projects: Project[] = [
     stack: ['Flutter', 'Drift', 'Firebase'],
     summary: 'Local-first inventory app with sections/items, custom attributes, and planned cloud sync.',
     href: '/projects/squirrels-box',
-    image: '/images/projects/squirrels_box_1200x675.webp',
+    image: `${import.meta.env.BASE_URL}images/projects/squirrels_box_1200x675.webp`,
     category: 'Productivity'
   },
   {
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     stack: ['Flutter', 'Firestore', 'FCM'],
     summary: 'Personal-safety app with multi-PIN verification, incident logging, and trusted contacts.',
     href: '/projects/runa-kani',
-    image: '/images/projects/runa_kani_1200x675.webp',
+    image: `${import.meta.env.BASE_URL}images/projects/runa_kani_1200x675.webp`,
     category: 'Safety'
   },
   {
@@ -33,7 +33,7 @@ export const projects: Project[] = [
     stack: ['Unity', 'Netcode', 'Relay v2'],
     summary: 'Multiplayer strategy prototype inspired by arena battlers with matchmaking and sync.',
     href: '/projects/aukyrion',
-    image: '/images/projects/aukyrion_1200x675.webp',
+    image: `${import.meta.env.BASE_URL}images/projects/aukyrion_1200x675.webp`,
     category: 'Game'
   }
 ];
