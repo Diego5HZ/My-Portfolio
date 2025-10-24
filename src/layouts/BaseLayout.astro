@@ -8,14 +8,15 @@ const {
   canonical = '/',
 } = Astro.props;
 
-
+// Generar canonical absoluto con base
 const site = Astro.site?.href ?? 'https://diego5hz.github.io/';
-const base = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL; 
 const path = canonical.replace(/^\/+/, '');
 const fullCanonical = `${site.replace(/\/$/, '')}${base}${path}`;
-
+---
 <html lang="en" class="scroll-smooth">
   <head>
+
     <base href={import.meta.env.BASE_URL} />
 
     <meta charset="utf-8" />
