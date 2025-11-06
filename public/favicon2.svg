@@ -1,17 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
   <defs>
-    <!-- Degradado turquesa → azul -->
     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#2DD4BF"></stop> <!-- Turquesa -->
       <stop offset="100%" stop-color="#0EA5E9"></stop> <!-- Azul -->
     </linearGradient>
   </defs>
 
-  <!-- Fondo degradado -->
-  <rect width="128" height="128" fill="url(#grad)" rx="24"></rect>
+  <!-- Fondo blanco -->
+  <rect width="128" height="128" fill="white" rx="24"></rect>
 
-  <!-- Texto blanco ":D" -->
-  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="central" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="700" fill="white">
+  <!-- Texto ":D" centrado -->
+  <text x="50%" y="54%" text-anchor="middle" dominant-baseline="central" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="700" fill="url(#grad)">
     :D
   </text>
 </svg>

@@ -2,27 +2,63 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { projects } from '../data/projects';
 import ProjectCard from '../components/ProjectCard.astro';
+import ToolsCarousel from '../components/ToolsCarousel.astro';
+const base = import.meta.env.BASE_URL;
 ---
-<BaseLayout title="Diego Henriquez — Software Engineer → Project Manager">
+
+<BaseLayout title="Diego Henriquez — Software Engineer">
   <section class="py-8 md:py-16">
     <div class="grid md:grid-cols-2 items-center gap-8 md:gap-12">
-      <div>
-        <h1 class="text-3xl md:text-5xl font-bold tracking-tight">Software Engineer → <span class="text-brand-700">Project Manager</span></h1>
-        <p class="mt-4 text-neutral-700 text-base md:text-lg">I build well‑designed products and lead delivery with focus on outcomes, quality and velocity. Here are selected projects and case studies.</p>
-        <div class="mt-6 flex flex-wrap items-center gap-3">
-          <a href="/projects" class="rounded-xl bg-brand-600 px-4 py-2 text-white hover:bg-brand-700">View Projects</a>
-          <a href="/contact" class="rounded-xl border border-neutral-300 px-4 py-2 hover:bg-neutral-100">Contact</a>
-        </div>
+      <div class="relative space-y-1 md:space-y-2">
+        <h1 class="font-extrabold leading-tight tracking-tight text-4xl md:text-6xl">
+          <span class="block">
+            <span class="text-brand-700">Software</span>
+            <span class="text-neutral-900"> Engineer</span>
+          </span>
+
+          <span class="block rotate-[-1deg] text-sky-700 md:text-5xl">
+            ↳ Leader
+          </span>
+
+          <span class="block rotate-[-1deg] text-neutral-900 md:pl-4 md:text-5xl">
+            ↳ Innovator
+          </span>
+        </h1>
+
       </div>
+
+
+
       <div class="rounded-3xl border border-neutral-200 p-6 bg-white shadow-sm">
-        <ul class="space-y-4">
-          <li class="flex items-start gap-3"><span class="mt-1 size-2 rounded-full bg-brand-600"></span> 15+ years in swimming discipline—now applying the same consistency to software and PM.</li>
-          <li class="flex items-start gap-3"><span class="mt-1 size-2 rounded-full bg-brand-600"></span> Strong in system design, data, and UI/UX craft.</li>
-          <li class="flex items-start gap-3"><span class="mt-1 size-2 rounded-full bg-brand-600"></span> Interested in public transport analytics and safety apps.</li>
+        <ul class="space-y-4 text-neutral-800 text-justify leading-relaxed">
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.4rem] h-2 w-2 rounded-full bg-brand-600 flex-shrink-0"></span>
+            I enjoy developing software projects that are planned under a solid and evolutive structure,  
+            smart in how they handle data and intuitive for the people who use them.  
+            I like solving problems with a mix of logic, creativity and care for the details.
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.4rem] h-2 w-2 rounded-full bg-brand-600 flex-shrink-0"></span>
+            I spent over 15 years in swimming and that taught me perseverance, focus  
+            and how small improvements every day make the biggest difference on a mindset I carry.
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.4rem] h-2 w-2 rounded-full bg-brand-600 flex-shrink-0"></span>
+            On my leisure, I love flying drones, practicing capoeira and singing.  
+            Each of those helps me on being creative and innovative in different ways.
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.4rem] h-2 w-2 rounded-full bg-brand-600 flex-shrink-0"></span>
+            I’m especially interested in ideas that connect people and data  
+            from building safety tools to improving how cities move and communicate.
+          </li>
         </ul>
       </div>
+
     </div>
   </section>
+
+
 
   <section class="py-8">
     <h2 class="text-xl md:text-2xl font-semibold mb-4">Featured Projects</h2>
@@ -30,4 +66,46 @@ import ProjectCard from '../components/ProjectCard.astro';
       {projects.map((p) => <ProjectCard project={p} />)}
     </div>
   </section>
+
+ <section class="py-6">
+    <ToolsCarousel
+      title="Tools & Tech I Use"
+      speed={28}
+      images={[
+        // Modeling & Architecture
+        { src: `${base}images/tools/ArchiMate.webp`, alt: 'ArchiMate' },
+        { src: `${base}images/tools/BizagiModeler.webp`, alt: 'Bizagi Modeler' },
+        { src: `${base}images/tools/LucidChart.webp`, alt: 'Lucidchart' },
+        { src: `${base}images/tools/Structurizr.webp`, alt: 'Structurizr' },
+
+        // Design & Prototyping
+        { src: `${base}images/tools/Figma.webp`, alt: 'Figma' },
+
+        // Cloud & Backend Platforms
+        { src: `${base}images/tools/Firebase.webp`, alt: 'Firebase' },
+        { src: `${base}images/tools/GCP.webp`, alt: 'Google Cloud Platform' },
+        { src: `${base}images/tools/Azure.webp`, alt: 'Microsoft Azure' },
+        { src: `${base}images/tools/AWS.webp`, alt: 'Amazon Web Services' },
+        { src: `${base}images/tools/sqlmanagement.webp`, alt: 'SQL Server Management Studio' },
+
+        // Programming Languages & Frameworks
+        { src: `${base}images/tools/Javascript.webp`, alt: 'JavaScript' },
+        { src: `${base}images/tools/typo3.webp`, alt: 'TypeScript' },
+        { src: `${base}images/tools/python.webp`, alt: 'Python' },
+        { src: `${base}images/tools/csharp.webp`, alt: 'C#' },
+        { src: `${base}images/tools/Flutter.webp`, alt: 'Flutter' },
+
+        // IDEs & Development Environments
+        { src: `${base}images/tools/VisualStudioCode.webp`, alt: 'Visual Studio Code' },
+        { src: `${base}images/tools/VisualStudio.webp`, alt: 'Visual Studio' },
+        { src: `${base}images/tools/NetBeans.webp`, alt: 'NetBeans' },
+        { src: `${base}images/tools/PyCharm.webp`, alt: 'PyCharm' },
+
+        // Testing & APIs
+        { src: `${base}images/tools/postman.webp`, alt: 'Postman' },
+      ]}
+    />
+  </section>
+
+
 </BaseLayout>

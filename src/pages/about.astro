@@ -1,9 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
- 
+
 <BaseLayout title="About — Diego Henriquez">
-  <section class="flex flex-col md:flex-row justify-center md:justify-center items-center md:items-center min-h-[70vh] gap-8 text-center md:text-left">
+  <section class="flex flex-col md:flex-row justify-center items-center min-h-[70vh] gap-8 text-center md:text-left">
     <div class="flex-shrink-0 w-48 h-48 md:w-56 md:h-56 rounded-2xl overflow-hidden shadow-md border border-neutral-200 bg-neutral-100">
       <img
         src={`${import.meta.env.BASE_URL}images/yolo.webp`}
@@ -14,23 +14,52 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <div class="max-w-2xl">
       <h1 class="text-2xl md:text-3xl font-bold mb-4">About Me</h1>
-      <ul class="list-disc md:pl-5 space-y-1 text-neutral-700 text-left">
-        <li>Engineer turning PM, with a design mindset and passion for building meaningful systems.</li>
-        <li>Cheerful, positive, and naturally empathetic — I enjoy listening and offering balanced perspectives.</li>
-        <li>I value collaboration, structure, and creativity when solving complex problems.</li>
-        <li>Focused on blending engineering, design, and leadership to make tech more human-centered.</li>
+
+      <ul class="space-y-4 text-neutral-700 text-justify leading-relaxed">
+        <li>
+          I’m a software engineer who enjoys turning ideas into real working systems.  
+          I do my best to focus on developing structured, maintainable solutions that can keep a continiously growth and make sense to the people who use them.
+        </li>
+        <li>
+          My experience goes on backend and full-stack development with <strong>.NET, C#, SQL, and Blazor</strong>,  
+          working across different project stages, from architecture and APIs to deployment and maintenance.  
+          I’ve also worked with <strong>Azure, AWS and Firebase</strong>, applying cloud tools to improve scalability and performance.
+        </li>
+        <li>
+          I care about how things are established, built and how teams work together.  
+          For me, good software comes from clear structure, open communication and attention to small details that can generate a really big impact on customers/users.
+        </li>
+        <li>
+          I’m a curious person and I do enjoy learning new disciplines on design, data structures and technology raising methods  
+          to build meaningful tools that help people work smarter and think differently.
+        </li>
       </ul>
 
-      <h2 class="text-xl font-semibold mt-6 mb-2">Hobbies & Interests</h2>
-      <ul class="list-disc md:pl-5 space-y-1 text-neutral-700 text-left">
-        <li>Origami and hands-on crafts — finding calm through creation.</li>
-        <li>Flying drones and exploring aerial photography.</li>
-        <li>Swimming — over 15 years of experience and still my favorite way to reset.</li>
-        <li>Building things — from gadgets to game prototypes.</li>
-        <li>Programming, experimenting, and designing systems that connect ideas to people.</li>
-        <li>Thinking up creative plans and long-term concepts.</li>
-      </ul>
+
+      <h2 class="text-xl font-semibold mt-8 mb-3">Hobbies</h2>
+        <ul class="space-y-3 text-neutral-800 text-justify leading-relaxed">
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.4rem] h-2 w-2 rounded-full bg-brand-600 flex-shrink-0"></span>
+            <span><strong>Flying drones and photography:</strong> a combination of precision, proper illumination, angle and perspective to capture the best picture or video.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.4rem] h-2 w-2 rounded-full bg-brand-600 flex-shrink-0"></span>
+            <span><strong>Practicing Capoeira:</strong> rhythm, discipline and flow in motion along a relaxing vibe.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.4rem] h-2 w-2 rounded-full bg-brand-600 flex-shrink-0"></span>
+            <span><strong>Singing and music:</strong> a way to disconnect and reconnect with creativity.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.4rem] h-2 w-2 rounded-full bg-brand-600 flex-shrink-0"></span>
+            <span><strong>Building things:</strong> from gadgets to game prototypes and experiments in tech.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="mt-[0.4rem] h-2 w-2 rounded-full bg-brand-600 flex-shrink-0"></span>
+            <span><strong>Designing systems that connect ideas to people:</strong> always with curiosity and long-term vision.</span>
+          </li>
+        </ul>
+
     </div>
   </section>
-
 </BaseLayout>

@@ -11,7 +11,6 @@ import CollapsibleCard from '../../components/CollapsibleCard.astro';
   </p>
 
   <div class="grid gap-6">
-    <!-- Knowledge & Skills -->
     <CollapsibleCard
       title="Knowledge & Skills"
       intro="Core capabilities oriented to clear structure, creative thinking, and adaptive delivery."
@@ -22,15 +21,14 @@ import CollapsibleCard from '../../components/CollapsibleCard.astro';
         <li><strong>Project Management</strong> — As-Is / To-Be, User Stories, Acceptance Criteria, Kanban, Gantt, Scrum & Waterfall.</li>
         <li><strong>Teamwork & Leadership</strong> — proactive, collaborative, and trust-driven with multidisciplinary teams.</li>
         <li><strong>Creativity & Innovation</strong> — open to experimentation, merging technical rigor with design thinking.</li>
+        <li>
+          <a class="underline text-brand-700 hover:text-brand-800" href="/case-studies/ai-models">
+            <strong>AI Model Development</strong>
+          </a> — design, training, and evaluation of ML models for reasoning, prediction, and embedding analysis.
+        </li>
       </ul>
-      <!-- Ejemplo: imagen futura
-      <div slot="media" class="rounded-xl overflow-hidden border border-neutral-200">
-        <img src="/images/skills-banner.jpg" alt="Skills overview" class="w-full h-auto" />
-      </div>
-      -->
     </CollapsibleCard>
 
-    <!-- Applied Case Studies -->
     <CollapsibleCard
       title="Applied Case Studies"
       intro="Selected product & system case studies with practical outcomes."
@@ -40,14 +38,8 @@ import CollapsibleCard from '../../components/CollapsibleCard.astro';
         <li><a class="underline" href="/case-studies/squirrels-box">Local-first inventory: data modeling and AI augmentation</a></li>
         <li><a class="underline" href="/case-studies/pt-eta">Real-time bus ETA: headways & data fusion</a></li>
       </ul>
-      <!-- Slot de media opcional
-      <div slot="media" class="rounded-xl overflow-hidden">
-        <img src="/images/case-studies-cover.jpg" alt="Case studies cover" class="w-full h-auto" />
-      </div>
-      -->
     </CollapsibleCard>
 
-    <!-- Research & Prototypes -->
     <CollapsibleCard
       title="Research & Prototypes"
       intro="Explorations, experiments, and early-stage models."
@@ -57,11 +49,6 @@ import CollapsibleCard from '../../components/CollapsibleCard.astro';
         <li><a class="underline" href="/case-studies/ai-evaluation">Evaluating reasoning accuracy in LLM-assisted sentiment analysis</a></li>
         <li><a class="underline" href="/case-studies/perception">Stereo vision & disparity estimation with SGBM</a></li>
       </ul>
-      <!-- Slot de media opcional
-      <div slot="media" class="rounded-xl overflow-hidden">
-        <img src="/images/research-teaser.jpg" alt="Research teaser" class="w-full h-auto" />
-      </div>
-      -->
     </CollapsibleCard>
   </div>
 </BaseLayout>

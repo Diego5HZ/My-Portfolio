@@ -5,7 +5,7 @@ export type Project = {
   summary: string;
   href?: string;
   image?: string;
-  category?: string; // opcional
+  category?: string;
 };
 
 export const projects: Project[] = [
@@ -14,7 +14,7 @@ export const projects: Project[] = [
     role: 'Lead Dev / PM',
     stack: ['Flutter', 'Drift', 'Firebase'],
     summary: 'Local-first inventory app with sections/items, custom attributes, and planned cloud sync.',
-    href: '/projects/squirrels-box',
+    href: `${import.meta.env.BASE_URL}coming-soon`,
     image: `${import.meta.env.BASE_URL}images/projects/squirrels_box_1200x675.webp`,
     category: 'Productivity'
   },
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     role: 'Lead Dev / PM',
     stack: ['Flutter', 'Firestore', 'FCM'],
     summary: 'Personal-safety app with multi-PIN verification, incident logging, and trusted contacts.',
-    href: '/projects/runa-kani',
+    href: 'https://diego5hz.github.io/runa-kani-web/en',
     image: `${import.meta.env.BASE_URL}images/projects/runa_kani_1200x675.webp`,
     category: 'Safety'
   },
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     role: 'Game Dev',
     stack: ['Unity', 'Netcode', 'Relay v2'],
     summary: 'Multiplayer strategy prototype inspired by arena battlers with matchmaking and sync.',
-    href: '/projects/aukyrion',
+    href: `${import.meta.env.BASE_URL}coming-soon`,
     image: `${import.meta.env.BASE_URL}images/projects/aukyrion_1200x675.webp`,
     category: 'Game'
   }
