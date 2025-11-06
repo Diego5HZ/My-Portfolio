@@ -1,27 +1,58 @@
 ---
 const base = import.meta.env.BASE_URL;
 const links = [
-  { href: base, label: 'Home' },  
   { href: `${base}projects/`, label: 'Projects' },
   { href: `${base}case-studies/`, label: 'Case Studies' },
   { href: `${base}about/`, label: 'About' },
   { href: `${base}contact/`, label: 'Contact' }
 ];
 ---
-<header class="py-6">
+<header class="py-6 relative">
   <div class="flex items-center justify-between gap-4">
     <a href={base} class="font-semibold tracking-tight text-lg">
       <span class="text-brand-600">:</span><span class="text-brand-600">D</span>iegohz5
     </a>
+
     <nav class="hidden md:flex items-center gap-6">
-      {links.map(l => <a href={l.href} class="hover:text-brand-700 transition">{l.label}</a>)}
+      {links.map(l => (
+        <a href={l.href} class="hover:text-brand-700 transition">{l.label}</a>
+      ))}
     </nav>
-    <button id="menu" class="md:hidden rounded-xl border px-3 py-2 border-neutral-200">Menu</button>
+
+    <button id="menu" class="md:hidden rounded-xl border px-3 py-2 border-neutral-200 flex items-center gap-2 text-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      Menu
+    </button>
   </div>
-  
-  <nav id="mobile" class="md:hidden mt-3 hidden flex-col gap-2">
-    {links.map(l => <a href={l.href} class="rounded-lg px-3 py-2 hover:bg-neutral-100">{l.label}</a>)}
+
+  <nav
+    id="mobile"
+    class="absolute left-0 right-0 mt-3 hidden bg-white/80 backdrop-blur-xl border border-neutral-200 rounded-2xl shadow-lg px-4 py-3 z-50 animate-fadein"
+  >
+    <ul class="flex flex-col divide-y divide-neutral-200">
+      {links.map(l => (
+        <li>
+          <a
+            href={l.href}
+            class="block py-3 pl-2 text-left text-neutral-800 rounded-lg transition font-medium hover:bg-brand-100/50 hover:text-brand-700"
+          >
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
   </nav>
+
+  <style>
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadein { animation: fadein 0.25s ease-out; }
+  </style>
+
   <script>
     const btn = document.getElementById('menu');
     const mobile = document.getElementById('mobile');
