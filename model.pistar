@@ -1,0 +1,14 @@
+{
+  "actors": [
+    { "id": "a1", "name": "Dispatcher" },
+    { "id": "a2", "name": "Driver" }
+  ],
+  "elements": [
+    { "id": "g1", "type": "Goal", "name": "Maintain Regular Headways", "actor": "a1" },
+    { "id": "t1", "type": "Task", "name": "Adjust Headway Interactively", "actor": "a1" },
+    { "id": "r1", "type": "Resource", "name": "AVL/Realtime API", "actor": "a1" }
+  ],
+  "dependencies": [
+    { "from": "a1", "to": "a2", "dependum": "Execute Dispatch Intervention" }
+  ]
+}
